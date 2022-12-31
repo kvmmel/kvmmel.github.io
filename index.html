@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yblblblylbylbylyblyblybl</title>
+</head>
+
+<body>
+
+    <div class="dziedzictwonarodowe">
+        <div class="widjo">
+            <iframe id="widjo" height="500px" width="500px" src="https://www.youtube.com/embed/wrXPXRULrBA?"
+                title="Kaz Bałagane - Blueface (Feat. Młody Dron) @Sher7ock (Official Video)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>"</iframe>
+            <p id="nowyrok"></p>
+        </div>
+    </div>
+</body>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 99%;
+        background-image: url("1169841.jpg");
+        background-repeat: no-repeat;
+    }
+
+    #nowyrok {
+        color: blue;
+    }
+
+    .dziedzictwonarodowe {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    .widjo {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+    }
+</style>
+<script>
+    function czas() {
+        let date = new Date();
+        let hh = date.getHours();
+        let mm = date.getMinutes();
+        let ss = date.getSeconds();
+        let fy = date.getFullYear();
+        let mo = date.getMonth();
+        let da = date.getDate();
+
+        let time = hh + ":" + mm + ":" + ss;
+
+        document.getElementById("nowyrok").innerText = time;
+        if (hh == 23 && mm == 59 && ss == 39) {
+            document.getElementById("widjo").src = "https://www.youtube.com/embed/wrXPXRULrBA?autoplay=1";
+        }
+        var t = setTimeout(function () {
+            czas();
+        }, 1000);
+
+    }
+
+    czas();
+</script>
+
+</html>
